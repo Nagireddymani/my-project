@@ -1,0 +1,77 @@
+# Gradle
+.gradle/
+build/
+dist/
+out/
+*.jar
+*.class
+
+# Maven
+target/
+*.jar
+*.war
+pom.xml.tag
+pom.xml.releaseBackup
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# NetBeans
+nbproject/
+.nb-gradle/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
+*.swp
+*.swo
+
+# IDE general
+*.log
+*.tmp
+
+# Runtime & application
+*.exe
+*.dll
+.env
+.env.local
+.env.*.local
+
+# Node (if used for build tooling)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python (if used for scripts)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db

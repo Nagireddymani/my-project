@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: user-auth-service
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:authdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: false
+
+server:
+  servlet:
+    context-path: /api
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  swagger-ui:
+    tagsSorter: alpha
+    operationsSorter: alpha
+
+logging:
+  level:
+    root: INFO
+    com.example.auth: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+
+auth:
+  jwt:
+    secret: super-secret-key-change-in-production-minimum-256-bits
+    expiration: 900000
+    refresh-expiration: 86400000
+  security:
+    bcrypt-rounds: 12
